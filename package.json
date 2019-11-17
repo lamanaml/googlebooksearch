@@ -1,6 +1,9 @@
 {
   "name": "googlebooksearch",
   "version": "1.0.0",
+  "engines": {
+    "node": "10.16.3"
+  },
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
   "main": "server.js",
   "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
