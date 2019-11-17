@@ -26,7 +26,7 @@
   },
   "homepage": "https://github.com/lamanaml/googlebooksearch#readme",
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.18.1",
     "if-env": "^1.0.4",
     "mongoose": "^5.7.11",
     "react-router-dom": "^5.1.2",
@@ -35,7 +35,7 @@
   },
   "devDependencies": {
     "body-parser": "^1.19.0",
-    "concurrently": "^4.1.0",
+    "concurrently": "^4.1.2",
     "express": "^4.17.1",
     "nodemon": "^1.18.7"
   }
