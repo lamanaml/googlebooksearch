@@ -1,7 +1,11 @@
 import React, { Component } from "react";
-import API from "../utils/API";
-// import Card from "../components/Card";
+// import Card from "../../components/Card";
 // import axios from "axios";
+import Hero from "../../components/Hero";
+import Container from "../../components/Container";
+import Row from "../../components/Row";
+import Col from "../../components/Col";
+
 
 class Saved extends Component {
   state = {
@@ -10,12 +14,12 @@ class Saved extends Component {
     books: []
     };
   
- componentDidMount() {
-    API.searchBooks()
-      .then(res => this.setState({ books: res.data.items }))
-      this.showResults(this.books)
-      .catch(err => console.log(err));
-  }
+//  componentDidMount() {
+//     API.searchBooks()
+//       .then(res => this.setState({ books: res.data.items }))
+//       this.showResults(this.books)
+//       .catch(err => console.log(err));
+//   }
 
 
   //  searchBooks = () => {
@@ -42,7 +46,21 @@ class Saved extends Component {
   render() {
     return (
       <div>
-        Search Results
+
+        <Hero >
+        <h1>Google Book Search</h1>
+        
+      </Hero>
+      <Container style={{ marginTop: 30 }}>
+        
+        <Row>
+          
+          <Col size="md-12">
+          Saved Books
+          </Col>
+        </Row>
+      </Container>
+        
       </div>
     );
   }

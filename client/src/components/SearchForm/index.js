@@ -11,17 +11,16 @@ function SearchForm(props) {
           value={props.search}
           onChange={props.handleInputChange}
           name="Book"
-          list="Books"
+          // list="Books"
           type="text"
           className="form-control"
-          placeholder="Type in a Book to begin"
           id="Book"
         />
-        <datalist id="Books">
+        {/* <datalist id="Books">
           {props.Books.map(Book => (
             <option value={Book} key={Book} />
           ))}
-        </datalist>
+        </datalist> */}
         <button type="submit" onClick={props.handleFormSubmit} className="btn btn-success">
           Search
         </button>
