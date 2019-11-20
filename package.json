@@ -1,26 +1,26 @@
 {
   "name": "googlebooksearch",
   "version": "1.0.0",
-  "description": "",
+  "description": "google Boook Seach",
   "main": "server.js",
-  "dependencies": {
-    "app": "^0.1.0",
-    "express": "^4.17.1",
-    "path": "^0.12.7"
-  },
-  "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start:prod": "node server.js",
+    "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
+    "client": "cd client && npm run start",
+    "seed": "node scripts/seedDB.js",
+    "install": "cd client && npm install",
+    "build": "cd client && npm run build",
+    "heroku-postbuild": "npm run build"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/lamanaml/googlebooksearch.git"
-  },
-  "author": "",
+  "author": "LaMana Donadelle",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/lamanaml/googlebooksearch/issues"
+  "devDependencies": {
+    "concurrently": "^4.1.2",
+    "nodemon": "^1.19.4"
   },
-  "homepage": "https://github.com/lamanaml/googlebooksearch#readme"
+  "dependencies": {
+    "express": "^4.16.3",
+    "if-env": "^1.0.4"
+  }
 }
