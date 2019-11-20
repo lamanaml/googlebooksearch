@@ -50,11 +50,11 @@ searchBooks = query => {
                         imageLinks} = obj.volumeInfo;
                
                 return { 
+                    imageLinks,
                     title,
                     authors,
                     description,
                     link: previewLink,
-                    imageLinks,
                 };
             })
             this.setState({
@@ -90,6 +90,7 @@ render () {
                 authors = {book.authors}
                 description = {book.description}
                 image = {book.imageLinks.thumbnail}
+                {...console.log(book.imageLinks.thumbnail)}
                 link = {book.previewLink}
                 // onClick = {handleSaveBook}
               />

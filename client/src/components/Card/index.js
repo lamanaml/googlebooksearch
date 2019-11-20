@@ -7,20 +7,20 @@ function Card(props) {
 
   
      
-      <div className="content">
-        <ul>
-          <h3>{props.title}</h3> 
-          <p> {props.authors}</p>
-          <p> {props.description}</p>        
-          <a href={props.link}>View Book</a>
-          {/* {props.children} */}
-          <div className="img-container">
-            {props.key}
-            <img src={props.image}  alt={props.title} />
-          </div>
-        </ul>
+ <div class="container">
+  <div class="row">
+    <div className="  card" >
+      <img src={props.image}  alt={props.key} className="card-img-top" />
+      <div className="card-body">
+        <h5 className="card-title">{props.title}</h5>
+        <p className="card-text">{props.authors}<br/>
+        {props.description}</p>
+        <a href={props.link} className="btn btn-primary">More Info</a>
       </div>
-
+    </div>
+</div>
+</div>
+    
   );
 
   };
